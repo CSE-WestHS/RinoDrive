@@ -24,7 +24,12 @@ import frc.robot.subsystems.DriveSystem;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
-  private final DriveSystem m_DriveSystem = new DriveSystem(1, 2);
+  private final DriveSystem m_DriveSystem = new DriveSystem(
+    Constants.OperatorConstants.LEFTMOTORCAN,
+    Constants.OperatorConstants.LEFTMOTORCAN2,
+    Constants.OperatorConstants.RIGHTMOTORCAN,
+    Constants.OperatorConstants.RIGHTMOTORCAN2
+    );
   private final Command drive = new XboxDrive(m_DriveSystem);
   // Replace with CommandPS4Controller or CommandJoystick if needed
   private final CommandXboxController m_driverController =
