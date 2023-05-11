@@ -29,9 +29,10 @@ public class DriveSystem extends SubsystemBase{
   }
   public void ControllerDrive(){
     if (Math.abs(OI.DriveController.getLeftY()) + Math.abs(OI.DriveController.getRightY()) >= 0.2 ){
-        leftMotor.set(ControlMode.PercentOutput, OI.DriveController.getLeftY() * Constants.OperatorConstants.MOTORSPEED);
+      // 0.95 is LeftAdj
+        leftMotor.set(ControlMode.PercentOutput, -OI.DriveController.getLeftY() * Constants.OperatorConstants.MOTORSPEED * 0.95);
         rightMotor.set(ControlMode.PercentOutput, OI.DriveController.getRightY() * Constants.OperatorConstants.MOTORSPEED);
-        leftMotor2.set(ControlMode.PercentOutput, OI.DriveController.getLeftY() * Constants.OperatorConstants.MOTORSPEED);
+        leftMotor2.set(ControlMode.PercentOutput, -OI.DriveController.getLeftY() * Constants.OperatorConstants.MOTORSPEED * 0.95);
         rightMotor2.set(ControlMode.PercentOutput, OI.DriveController.getRightY() * Constants.OperatorConstants.MOTORSPEED);
 
     }

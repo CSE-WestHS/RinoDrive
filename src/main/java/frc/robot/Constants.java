@@ -19,7 +19,7 @@ public final class Constants {
     public static final int RIGHTMOTORCAN = 3;
     public static final int LEFTMOTORCAN2 = 2;
     public static final int RIGHTMOTORCAN2 = 4;
-    public static final double MOTORSPEED = 0.6;
+    public static final double MOTORSPEED = 0.8;
     
   }
 }

@@ -6,6 +6,7 @@ public class XboxDrive extends CommandBase{
     DriveSystem m_DriveSystem;
     public XboxDrive(DriveSystem m_DriveSystem){
         this.m_DriveSystem = m_DriveSystem;
+        addRequirements(m_DriveSystem);
     }
     @Override
     public void execute() {
